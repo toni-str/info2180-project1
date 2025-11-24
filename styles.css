@@ -1,11 +1,312 @@
-/* Add your CSS to this file */
+
 body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; 
+    font-size: 18px; 
+    color: #333;
+    line-height: 1.6;
     margin: 0;
-    font-size: 16px;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 .container {
+    width: 90%;
+    max-width: 1200px; 
     margin: 0 auto;
-    max-width: 960px;
+}
+
+section {
+    padding: 60px 0; 
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Header and Navigation Styles */
+
+header {
+    background-color: white; 
+    border-bottom: 1px solid #E2E8F0;
+}
+
+header .container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 18px; 
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none; 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+header nav a {
+    color: #6b7280; 
+    font-size: 18px; 
+}
+
+header nav a:hover {
+    color: #5A67D8; 
+}
+
+
+/* Hero Overview Section (Live your Healthiest Life Now) */
+
+.overview-hero {
+    background-color: #E2E8F0; 
+    padding: 80px 0;
+}
+
+.overview-hero .container {
+    display: flex; 
+    align-items: center;
+    gap: 50px;
+}
+
+.overview-hero-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.overview-hero-image img {
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overview-hero-text {
+    flex: 2;
+}
+
+
+/* Learn About Section (CSS Grid Cards) */
+
+.learn-about h2 {
+    color: #48BB78; 
+    font-size: 24px; 
+    margin-bottom: 30px;
+}
+
+.learn-about .cards {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.card {
+    border: 1px solid #E2E8F0; 
+    border-radius: 5px; 
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #48BB78; 
+    font-size: 21px; 
+    margin-top: 0;
+}
+
+
+/* COVID-19 Testing Section */
+
+.testing {
+    background-color: #4A5568; 
+    color: white; 
+}
+
+.testing .container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 40px;
+}
+
+.testing-desciption h2, .testing-desciption p {
+    margin: 0;
+}
+
+.testing-desciption p {
+    margin-top: 10px;
+}
+
+.testing .btn {
+    background-color: #48BB78; 
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px; 
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* Recent Stories Section */
+
+.stories h2 {
+    color: #5A67D8; 
+    margin-bottom: 40px;
+}
+
+.stories article {
+    display: flex; 
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.stories article:last-child {
+    margin-bottom: 0;
+}
+
+.stories article img {
+    flex-shrink: 0; 
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 50%; 
+    display: block;
+}
+
+.article-body h3 {
+    font-size: 18px; 
+    margin-top: 0;
+}
+
+.article-body a {
+    color: #5A67D8; 
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+/* Newsletter Section */
+
+.newsletter {
+    background-color: #48BB78; 
+    color: white;  
+    text-align: center;  
+}
+
+.newsletter h3, .newsletter p {
+    margin-top: 0;
+}
+
+.newsletter form {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter .form-group {
+    flex-grow: 1;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.newsletter .btn {
+    background-color: #5A67D8; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Message div styling (for JS output) */
+.newsletter .message {
+    margin-top: 20px;
+    font-weight: bold;
+    min-height: 20px; 
+}
+
+
+/* Footer Section */
+
+footer {
+    background-color: #4A5568; 
+    color: white; 
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Media Queries (Responsive Adjustments) */
+
+
+@media (max-width: 768px) {
+    
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .overview-hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .learn-about .cards {
+        grid-template-columns: 1fr; 
+    }
+
+    .testing .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .stories article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+    .newsletter .btn {
+        width: 100%;
+    }
 }
